@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld ref="HelloWorld" audioSrc="http://sftest.olcourt.cn/test.wav" msg="Welcome to Your Vue.js App"/>
+    <HelloWorld ref="HelloWorld" :audioSrc="audioSrc" msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      audioSrc: ''
+    }
   },
   created() {
   },
